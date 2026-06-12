@@ -1,0 +1,370 @@
+# Instincts generated from https://github.com/b08x/autoskills
+# Generated: 2026-06-01T11:22:12.416Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: autoskills-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/b08x/autoskills
+---
+
+# Autoskills Commit Length
+
+## Action
+
+Write moderate-length commit messages (~56 characters)
+
+## Evidence
+
+- Average commit message length: 56 chars
+- Based on 9 commits
+
+---
+id: autoskills-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/autoskills
+---
+
+# Autoskills Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: autoskills-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/autoskills
+---
+
+# Autoskills Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: autoskills-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/autoskills
+---
+
+# Autoskills Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: autoskills-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/b08x/autoskills
+---
+
+# Autoskills Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: autoskills-workflow-dependency-update
+trigger: "when doing dependency update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/b08x/autoskills
+---
+
+# Autoskills Workflow Dependency Update
+
+## Action
+
+Follow the dependency-update workflow:
+1. Update the version of a dependency in package.json
+2. Regenerate or update pnpm-lock.yaml to reflect the new dependency version
+3. Commit both files with a message indicating the dependency change
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: package.json, pnpm-lock.yaml
+
+---
+id: autoskills-workflow-merge-feature-or-dependency-pr
+trigger: "when doing merge feature or dependency pr"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/b08x/autoskills
+---
+
+# Autoskills Workflow Merge Feature Or Dependency Pr
+
+## Action
+
+Follow the merge-feature-or-dependency-pr workflow:
+1. Merge the pull request branch into main
+2. Apply the same file changes as in the original feature or dependency branch
+3. Commit with a merge message referencing the PR
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/pages/index.astro, package.json, pnpm-lock.yaml
+
+---
+id: autoskills-instinct-file-naming
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/autoskills
+---
+
+# Autoskills Instinct File Naming
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in namingConventions.files
+- Observed in src/pages/index.astro
+
+---
+id: autoskills-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/autoskills
+---
+
+# Autoskills Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions
+
+---
+id: autoskills-instinct-class-naming
+trigger: "When defining a class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/autoskills
+---
+
+# Autoskills Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: autoskills-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/autoskills
+---
+
+# Autoskills Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: autoskills-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/autoskills
+---
+
+# Autoskills Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: autoskills-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/autoskills
+---
+
+# Autoskills Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: autoskills-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: b08x/autoskills
+---
+
+# Autoskills Instinct Test Location
+
+## Action
+
+Place test files in a separate directory from source files
+
+## Evidence
+
+- Pattern in architecture.testLocation: separate
+
+---
+id: autoskills-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: b08x/autoskills
+---
+
+# Autoskills Instinct Commit Prefix
+
+## Action
+
+Prefix the commit message with 'feat' for features or 'chore' for maintenance/dependency updates
+
+## Evidence
+
+- Seen in commit: 'feat: add ElysiaJS support with skills registry documentation and icon'
+- Seen in commit: 'chore(deps): bump geist from 1.7.0 to 1.7.1'
+
+---
+id: autoskills-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: b08x/autoskills
+---
+
+# Autoskills Instinct Commit Length
+
+## Action
+
+Keep commit messages concise, around 50-60 characters
+
+## Evidence
+
+- Average commit length: 56
+- Examples: 'feat: fixed height for terminal animation'
+
+---
+id: autoskills-instinct-dependency-update
+trigger: "When a dependency needs to be updated (via Dependabot or manually)"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: b08x/autoskills
+---
+
+# Autoskills Instinct Dependency Update
+
+## Action
+
+Update the version in package.json, regenerate pnpm-lock.yaml, and commit both files with a message indicating the dependency change
+
+## Evidence
+
+- Workflow: dependency-update
+- Seen in commit: 'chore(deps): bump oxlint from 1.63.0 to 1.66.0'
+- Files involved: package.json, pnpm-lock.yaml
+
+---
+id: autoskills-instinct-merge-pr
+trigger: "When a pull request is approved and merged into main"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: b08x/autoskills
+---
+
+# Autoskills Instinct Merge Pr
+
+## Action
+
+Merge the PR branch, apply file changes from the source branch, and commit with a merge message referencing the PR
+
+## Evidence
+
+- Workflow: merge-feature-or-dependency-pr
+- Seen in commit: 'Merge pull request #134 from mapas48a/feat-add-elysia-skills'
+- Files involved: src/pages/index.astro, package.json, pnpm-lock.yaml, etc.
+
